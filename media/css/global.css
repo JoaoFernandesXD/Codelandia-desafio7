@@ -73,6 +73,15 @@ main .conteudo article {
 	justify-content: center;
 	text-align: center;
 }
+.main .conteudo article::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+}
 main .conteudo article:hover {
 	margin-top: -10px;
 }
@@ -85,6 +94,8 @@ main .conteudo .sombra {
 	margin-top: -200px;
 	margin-left: 2px;
 	z-index: -1;
+	clip-path: polygon(15% 0, 80% 0%, 100% 0, 100% 100%, 80% 100%, 20% 100%, 0 100%, 0 10%);
+
 }
 
 main .conteudo article img {
@@ -93,8 +104,13 @@ main .conteudo article img {
 	margin-bottom: 12px;
 	border: 2px solid white;
 	background-color: #FF4656;
-
+	top: 2px;
+	left: 2px;
+	clip-path: polygon(8% 0, 80% 0%, 100% 0, 100% 100%, 80% 100%, 20% 100%, 0 100%, 0 10%);
+	filter:
+    drop-shadow(0px -3px 0px white) 
 }
+
 main .conteudo article span {
 	font-family: "Open Sans", sans-serif;
 	font-size: 16px;
@@ -105,7 +121,6 @@ main .conteudo article span {
 main .container__right img {
 	/* aninação avatar */
 	animation: float 5s ease-in-out infinite;
-	
 }
 footer {
 	width: 100%;
